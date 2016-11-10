@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/viewStub"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="dys.bdindoormapdemo.MainActivity">
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"/>
+    <Button
+        android:id="@+id/btn_init_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="init Data"/>
+    <TextView
+        android:id="@+id/tv_point"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:textColor="#000000"
+        android:layout_alignParentRight="true"
+        android:textSize="18sp"/>
+    <EditText
+        android:id="@+id/city"
+        android:layout_width="wrap_content"
+        android:minWidth="40dp"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/geocodekey"
+        android:text="北京" />
+
+    <EditText
+        android:id="@+id/geocodekey"
+        android:minWidth="80dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/btn_geo"
+        android:text="北京西站" />
+    <Button
+        android:id="@+id/btn_geo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="searchButtonProcess"
+        android:layout_alignParentRight="true"
+        android:text="搜索" />
+
+</RelativeLayout>
